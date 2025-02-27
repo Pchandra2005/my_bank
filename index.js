@@ -123,13 +123,15 @@ function chkUser() {
 }
 function showForm() {
   let str = `
-  <h2>Registration Form</h2>
-  <p><input type="text" class='form-control' id="name" placeholder="Name"></p>
-  <p><input type="text" class='form-control' id="email" placeholder="Email"></p>
-  <p><input type="password" class='form-control' id="password" placeholder="Password"></p>
-  <p><input type="date" class='form-contorl' id="dob"></p>
-  <p><button onclick='addUser()'>Submit</button></p>
-  <p>Already a member?<button onclick='showLogin()'>Login Here</button></p>
+  <div class="w-100 bg-info text-cneter m-5 p-5 rounded-5 text-center">
+    <h2>Registration Form</h2>
+    <p><input type="text" class='form-control' id="name" placeholder="Name"></p>
+    <p><input type="text" class='form-control' id="email" placeholder="Email"></p>
+    <p><input type="password" class='form-control' id="password" placeholder="Password"></p>
+    <p><input type="date" class='form-contorl' id="dob"></p>
+    <p><button onclick='addUser()' class="btn btn-primary w-100">Submit</button></p>
+    <p>Already a member?<button onclick='showLogin()'>Login Here</button></p>
+  </div>
   `;
   root.innerHTML = str;
 }
@@ -138,8 +140,8 @@ function showLogin() {
   <div class=" w-100 bg-info text-center m-5 p-5 rounded-5 text-center">
       <h2>Login Form</h2>
       <div id='msg'></div>
-      <p><input id="email" class='form-control' type="text"></p>
-      <p><input id="password" class='form-control' type="password"></p>
+      <p><input id="email" class='form-control' placeholder="email" type="text"></p>
+      <p><input id="password" class='form-control' placeholder="password" type="password"></p>
       <button onclick='chkUser()' class="btn btn-primary w-100">Log In</button>
       <p><button onclick='showForm()' class="btn btn-primary mt-3">Create Account</button></p>
       <button onclick='showAllUsers()'>View Users</button>
